@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:openid_client/openid_client.dart';
 import 'openid_io.dart' if (dart.library.html) 'openid_browser.dart';
 
-const keycloakUri = 'http://localhost:8080/realms/myrealm';
+const keycloakUri = 'http://10.7.183.225:8080/realms/myrealm';
 const scopes = ['profile'];
 
 Credential? credential;
@@ -14,7 +14,7 @@ late final Client client;
 
 Future<Client> getClient() async {
   var uri = Uri.parse(keycloakUri);
-  if (!kIsWeb && Platform.isAndroid) uri = uri.replace(host: '10.0.2.2');
+  if (!kIsWeb && Platform.isAndroid) uri = uri.replace(host: '10.7.183.225');
   var clientId = 'myclient';
 
   var issuer = await Issuer.discover(uri);

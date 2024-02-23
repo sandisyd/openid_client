@@ -16,6 +16,8 @@ dependencies:
   args: ^2.0.0
   meta: ^1.0.0
   clock: ^1.1.0
+  flutter:
+    sdk: flutter
 
 dev_dependencies:
   test: ^1.16.5
